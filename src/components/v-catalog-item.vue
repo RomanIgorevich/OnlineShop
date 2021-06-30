@@ -5,7 +5,7 @@
     <p class="v-catalog-item__price">Price: {{ product.price }} руб.</p>
     <button
       class="v-catalog-item__add_to_cart_btn btn"
-     
+     @click="addToCart"
     >
       Add to card
     </button>
@@ -29,7 +29,11 @@ export default {
     return {};
   },
   computed: {},
-  methods: {},
+  methods: {
+    addToCart(){
+      this.$emit('addToCart',this.product)
+    }
+  },
   watch: {},
   mounted() {},
 };
