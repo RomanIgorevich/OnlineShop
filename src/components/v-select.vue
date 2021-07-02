@@ -3,7 +3,7 @@
     <p class="title" @click="areOptionsVisible = !areOptionsVisible">
       {{ selected }}
     </p>
-    <div class="options" v-if="areOptionsVisible">
+    <div class="options" v-if="areOptionsVisible || isExpanded">
       <p
         v-for="option of categories"
         :key="option.value"
@@ -28,6 +28,10 @@ export default {
       type: String,
       default: "",
     },
+    isExpanded:{
+        type: Boolean,
+        default: false
+    }
   },
   data() {
     return {
