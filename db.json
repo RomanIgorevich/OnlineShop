@@ -3,7 +3,7 @@
     {
       "image": "1.jpg",
       "name": "T-shirt 1",
-      "price": 2100,
+      "price": 2100.32434234324,
       "article": "T1",
       "available": true,
       "category": "Обычная" 
@@ -11,7 +11,7 @@
     {
       "image": "2.jpeg",
       "name": "T-shirt 2",
-      "price": 3150,
+      "price": 3150.9734620953,
       "article": "T2",
       "available": true,
       "category": "Юбилеиная"
@@ -19,7 +19,7 @@
     {
       "image": "3.jpg",
       "name": "T-shirt 3",
-      "price": 4200,
+      "price": 4200.2123928348343,
       "article": "T3",
       "available": false,
       "category": "Юбилеиная"
@@ -27,7 +27,7 @@
     {
       "image": "4.jpg",
       "name": "T-shirt 4",
-      "price": 5300,
+      "price": 5300.2342341898,
       "article": "T4",
       "available": true,
       "category": "Обычная"
@@ -35,7 +35,7 @@
     {
       "image": "5.jpeg",
       "name": "T-shirt 5",
-      "price": 6500,
+      "price": 6500.123243456,
       "article": "T5",
       "available": false,
       "category": "Юбилеиная"
@@ -43,7 +43,7 @@
     {
       "image": "6.jpg",
       "name": "T-shirt 6",
-      "price": 8700,
+      "price": 8700.345345435,
       "article": "T6",
       "available": true,
       "category": "Юбилеиная"

@@ -1,9 +1,11 @@
 <template>
   <div class="v-catalog-item">
-    <v-popup v-if="isInfoPopupVisible" 
-    :popupTitle="product.name"
-    rightBtnTitle="Add to cart" @closePopup="closeInfoPopup"
-    @rightBtnAction="addToCart"
+    <v-popup
+      v-if="isInfoPopupVisible"
+      :popupTitle="product.name"
+      rightBtnTitle="Add to cart"
+      @closePopup="closeInfoPopup"
+      @rightBtnAction="addToCart"
     >
       <img
         class="v-catalog-item_image"
@@ -12,8 +14,12 @@
       />
       <div>
         <p class="v-catalog-item__name">{{ product.name }}</p>
-        <p class="v-catalog-item__price">Price: {{ product.price }} руб.</p>
-        <p class="v-catalog-item__price">Price: {{ product.category }}</p>
+        <p class="v-catalog-item__price">
+          Price: {{ product.price | toFix | priceFormat }}
+        </p>
+        <p class="v-catalog-item__category">
+          Категория: {{ product.category }}
+        </p>
       </div>
     </v-popup>
     <img
@@ -22,7 +28,7 @@
       alt="img"
     />
     <p class="v-catalog-item__name">{{ product.name }}</p>
-    <p class="v-catalog-item__price">Price: {{ product.price }} руб.</p>
+    <p class="v-catalog-item__price">Price: {{ product.price | toFix | priceFormat }}</p>
     <button class="v-catalog-item__show-info" @click="showPopupInfo">
       Показать информацию
     </button>
@@ -35,7 +41,8 @@
 
 <script>
 import vPopup from "../components/popup/v-popup.vue";
-
+import toFix from "../filters/toFix";
+import priceFormat from "../filters/price-format";
 export default {
   name: "v-catalog-item",
   components: {
@@ -54,6 +61,10 @@ export default {
     return {
       isInfoPopupVisible: false,
     };
+  },
+  filters: {
+    toFix,
+    priceFormat,
   },
   computed: {},
   methods: {
