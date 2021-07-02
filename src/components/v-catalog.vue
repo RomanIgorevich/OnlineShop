@@ -96,18 +96,18 @@ export default {
       }
       this.sortByCategories();
     },
-    
+
     sortByCategories(category) {
       let vm = this;
       this.sortedProducts = [...this.PRODUCTS];
       this.sortedProducts = this.sortedProducts.filter((item) => {
         return item.price >= vm.minPrice && item.price <= vm.maxPrise;
       });
-      if(category){
-        this.sortedProducts = this.sortedProducts.filter(e=>{
-vm.selected === category.name
-return e.category === category.name
-        })
+      if (category) {
+        this.sortedProducts = this.sortedProducts.filter((e) => {
+          vm.selected === category.name;
+          return e.category === category.name;
+        });
       }
       // ----------------
       // this.sortedProducts = [];
@@ -133,7 +133,7 @@ return e.category === category.name
 </script>
 
 <style lang="scss">
-.v-catalog { 
+.v-catalog {
   &_list {
     display: flex;
     flex-wrap: wrap;

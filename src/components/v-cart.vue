@@ -12,7 +12,7 @@
       :key="item.article"
       :cart_item_data="item"
       @deleteFromCart="deleteFromCart(index)"
-@decrement="decrement(index)"
+      @decrement="decrement(index)"
       @increment="increment(index)"
     />
     <div class="v-cart__total">
@@ -58,16 +58,20 @@ export default {
     },
   },
   methods: {
-    ...mapActions(["DELETE_FROM_CART","INCREMENT_CART_ITEM", "DECREMENT_CART_ITEM"]),
+    ...mapActions([
+      "DELETE_FROM_CART",
+      "INCREMENT_CART_ITEM",
+      "DECREMENT_CART_ITEM",
+    ]),
     deleteFromCart(index) {
       this.DELETE_FROM_CART(index);
     },
-    decrement(index){
-      this.DECREMENT_CART_ITEM(index)
+    decrement(index) {
+      this.DECREMENT_CART_ITEM(index);
     },
-increment(index){
-        this.INCREMENT_CART_ITEM(index)
-}
+    increment(index) {
+      this.INCREMENT_CART_ITEM(index);
+    },
   },
   watch: {},
   mounted() {},
